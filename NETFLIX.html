@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NETFLIX</title>
+        <link rel="stylesheet" href="C:\Users\sandr\Desktop\OwlCarousel2-2.3.4\docs\assets\style\owl.carousel.min.css">
+        <link rel="stylesheet" href="C:\Users\sandr\Desktop\OwlCarousel2-2.3.4\docs\assets\style\owl.theme.default.min.css">
+        <style>
+            :root{
+                --vermelho: #E50914;
+                --preto: #141414;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: var(--preto);
+                font-family:arial;
+            }
+            header .container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content:space-between;
+               
+                
+            }
+            header .logo{
+                margin-left: 5px;
+                color: var(--vermelho);
+                font-family: "arial black";
+                font-size: 40px;
+            }
+            header nav a {
+                text-decoration: none;
+                color: #AAA;
+                margin-right: 30px;
+                position: relative;
+                left: -550px;
+            }
+            header nav a:hover{
+                color:#fff;
+            }
+            .filme-principal{
+                color:white;
+                font-size: 16px;
+                background:url(raven.png);
+                height: 450px;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+            .descricao {
+                margin-bottom: 40px;
+                margin-top: 10px;
+            }
+            .titulos{
+                font-size: 30px;
+                margin-top: 15%;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .botao{
+                background-color: rgba(0, 0, 0, .50);
+                border: none;
+                color: white;
+                padding: 15px 30px;
+                margin-right: 15px;
+                font-size: 12px;
+                cursor: pointer;
+                transition: 3s ease all;
+            }
+            .botao:hover{
+                background-color: white;
+                color: black;
+            }
+            .botao i {
+                margin-right: 10px;
+            }
+            .container{
+                margin-left: 20px;
+            }
+            .filme-principal .container{
+                width: 70%;
+            }
+            .box-filme{
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+            @media screen and (max-width: 700px){
+                header .container{
+                    display: flex;
+                    flex-direction: column;
+            }
+            .botao{
+                margin-top: 5px;
+                width: 300px;
+            }
+            }
+            @media screen and (min-width: 1000px){
+                .descricao{
+                    width: 50%;
+                }
+            }
+            .carrosel-filmes{
+                margin-top: 5px;
+            }  
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h2 class="logo">NETFLIX</h2>
+                <nav>
+                  <a href="#">Inicio</a>
+                  <a href="#">Séries</a>
+                  <a href="#">Filmes</a>
+                  <a href="#">Documentários</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="filme-principal">
+                <div class="container">
+                    <h3 class="titulos">AS VISÕES DA RAVEN</h3>
+                    <p class="descricao">Raven Baxter (Raven-Symone) é uma adolescente que tem a habilidade de ver o futuro.</p>
+                    <button role="button"class="botao">
+                        <i class="fas fa-play"></i>
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fas fa-info"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+        </main>
+            <div class="carrosel-filmes">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img class="box-filme" src="filme1.jpg">
+                    </div>
+                    <div class="item">
+                        <img class="box-filme" src="filme2.jpg">
+                    </div>
+                    <div class="item">
+                        <img class="box-filme" src="filme3.jpg">
+                    </div>
+                    <div class="item">
+                        <img class="box-filme" src="filme4.jpg">
+                    </div>
+                    <div class="item">
+                        <img class="box-filme" src="filme5.jpg">
+                    </div>
+
+                </div>
+             </div>
+        <script src="https://kit.fontawesome.com/c5cb81ed58.js" crossorigin="anonymous"></script>
+        <script src="C:\Users\sandr\Desktop\OwlCarousel2-2.3.4\docs\assets\js\own\jquery.min.js"></script>
+        <script src="C:\Users\sandr\Desktop\OwlCarousel2-2.3.4\docs\assets\js\own\owl.carousel.min.js"></script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+        }
+    }
+})
+        </script>
+    </body>
+</html>
